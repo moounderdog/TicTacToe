@@ -1,5 +1,6 @@
 /* Play Tic Toe, against a friend or the computer.
-If u choose to play against the computer, the 'Computer Player' will use the getBestMove function to choose one of the best possible moves.
+If u choose to play against the computer, the 'Computer Player' will use the getBestMove function to choose one of the best 
+possible moves.
 */
 
 // -- Constants --
@@ -124,7 +125,8 @@ function Board (options){
     }
 
   function getBestMove (board, symbol){
-    // Receives a board, and the symbol of the player who has the next move. Returns the cordinates of the move and a score for that move (1-for winning, 0 for tie, and -1 for losing)
+    // Receives a board, and the symbol of the player who has the next move. Returns the cordinates of the move and a score 
+    //for that move (1-for winning, 0 for tie, and -1 for losing)
     function copyBoard(board) {
       let copy = []
        for (let row = 0 ; row<3 ; row++){
@@ -161,7 +163,8 @@ function Board (options){
     let availableMovesAndScores = []
 
     for (var i=0 ; i<availableMoves.length ; i++){
-      // Iterates over each available move. If it finds a winning move it returns it immediately. Otherwise it pushes a move and a score to the availableMovesAndScores array.
+      // Iterates over each available move. If it finds a winning move it returns it immediately. Otherwise it pushes a move 
+      //and a score to the availableMovesAndScores array.
       let move = availableMoves[i]
       let newBoard = copyBoard(board)
       newBoard = applyMove(newBoard,move, symbol)
